@@ -1,0 +1,25 @@
+{
+  "name": "dizero",
+  "private": true,
+  "version": "0.1.0",
+  "description": "DiZero — a lightweight, extensible desktop communication client.",
+  "license": "(MIT OR Apache-2.0)",
+  "workspaces": [
+    "apps/desktop",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run tauri --workspace @dizero/desktop -- dev",
+    "build": "npm run tauri --workspace @dizero/desktop -- build",
+    "check": "npm run check --workspace @dizero/desktop",
+    "test": "npm run test:rust && npm run test:web",
+    "test:rust": "cargo test --workspace",
+    "test:web": "npm run test --workspace @dizero/desktop",
+    "lint:rust": "cargo clippy --workspace --all-targets -- -D warnings",
+    "fmt": "cargo fmt --all",
+    "measure": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/measure-memory.ps1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-messages-search"
+description = "Enables the messages_search command without any pre-configured scope."
+commands.allow = ["messages_search"]
+
+[[permission]]
+identifier = "deny-messages-search"
+description = "Denies the messages_search command without any pre-configured scope."
+commands.deny = ["messages_search"]

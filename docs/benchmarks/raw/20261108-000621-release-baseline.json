@@ -1,0 +1,179 @@
+﻿{
+    "Label":  "release-baseline",
+    "Date":  "2026-11-08T00:06:21",
+    "Machine":  {
+                    "Cpu":  "AMD Ryzen 5 5600G with Radeon Graphics",
+                    "RamGiB":  15.8,
+                    "Os":  "Microsoft Windows 11 Pro build 26300",
+                    "WebView2":  "157.0.4341.42"
+                },
+    "Method":  "Launch-\u003evisible window; settle 20 s; 10 samples at 1000 ms; medians; whole process tree",
+    "BrowserArgs":  "",
+    "Exe":  "F:\\APPS\\UTILITIES\\PROJECTS\\DIZERO\\target\\release\\dizero.exe",
+    "ExeSizeMiB":  13.18,
+    "Runs":  [
+                 {
+                     "Run":  1,
+                     "LaunchToVisibleMs":  796,
+                     "UiReadyMs":  709,
+                     "Processes":  7,
+                     "TotalPrivateWorkingSetMiB":  108.2,
+                     "TotalWorkingSetMiB":  392.7,
+                     "TotalPrivateBytesMiB":  188.2,
+                     "PerProcess":  [
+                                        {
+                                            "Role":  "renderer",
+                                            "PrivateWorkingSetMiB":  35,
+                                            "WorkingSetMiB":  92.9,
+                                            "PrivateBytesMiB":  45.4
+                                        },
+                                        {
+                                            "Role":  "webview2 browser",
+                                            "PrivateWorkingSetMiB":  29.9,
+                                            "WorkingSetMiB":  124.9,
+                                            "PrivateBytesMiB":  38.3
+                                        },
+                                        {
+                                            "Role":  "gpu-process",
+                                            "PrivateWorkingSetMiB":  25.6,
+                                            "WorkingSetMiB":  73.6,
+                                            "PrivateBytesMiB":  73.6
+                                        },
+                                        {
+                                            "Role":  "utility: NetworkService",
+                                            "PrivateWorkingSetMiB":  7.7,
+                                            "WorkingSetMiB":  38,
+                                            "PrivateBytesMiB":  12.8
+                                        },
+                                        {
+                                            "Role":  "dizero (core)",
+                                            "PrivateWorkingSetMiB":  4.9,
+                                            "WorkingSetMiB":  31.1,
+                                            "PrivateBytesMiB":  7.1
+                                        },
+                                        {
+                                            "Role":  "utility: StorageService",
+                                            "PrivateWorkingSetMiB":  3.1,
+                                            "WorkingSetMiB":  19.8,
+                                            "PrivateBytesMiB":  7.6
+                                        },
+                                        {
+                                            "Role":  "crashpad-handler",
+                                            "PrivateWorkingSetMiB":  2.1,
+                                            "WorkingSetMiB":  12.3,
+                                            "PrivateBytesMiB":  3.3
+                                        }
+                                    ]
+                 },
+                 {
+                     "Run":  2,
+                     "LaunchToVisibleMs":  734,
+                     "UiReadyMs":  698,
+                     "Processes":  7,
+                     "TotalPrivateWorkingSetMiB":  112.1,
+                     "TotalWorkingSetMiB":  394.1,
+                     "TotalPrivateBytesMiB":  192,
+                     "PerProcess":  [
+                                        {
+                                            "Role":  "renderer",
+                                            "PrivateWorkingSetMiB":  37.7,
+                                            "WorkingSetMiB":  95.7,
+                                            "PrivateBytesMiB":  48.6
+                                        },
+                                        {
+                                            "Role":  "webview2 browser",
+                                            "PrivateWorkingSetMiB":  30.1,
+                                            "WorkingSetMiB":  125.1,
+                                            "PrivateBytesMiB":  38.5
+                                        },
+                                        {
+                                            "Role":  "gpu-process",
+                                            "PrivateWorkingSetMiB":  26.8,
+                                            "WorkingSetMiB":  72.3,
+                                            "PrivateBytesMiB":  74.9
+                                        },
+                                        {
+                                            "Role":  "utility: NetworkService",
+                                            "PrivateWorkingSetMiB":  7.4,
+                                            "WorkingSetMiB":  37.7,
+                                            "PrivateBytesMiB":  12.6
+                                        },
+                                        {
+                                            "Role":  "dizero (core)",
+                                            "PrivateWorkingSetMiB":  4.9,
+                                            "WorkingSetMiB":  31.1,
+                                            "PrivateBytesMiB":  6.5
+                                        },
+                                        {
+                                            "Role":  "utility: StorageService",
+                                            "PrivateWorkingSetMiB":  3.1,
+                                            "WorkingSetMiB":  19.8,
+                                            "PrivateBytesMiB":  7.6
+                                        },
+                                        {
+                                            "Role":  "crashpad-handler",
+                                            "PrivateWorkingSetMiB":  2.1,
+                                            "WorkingSetMiB":  12.3,
+                                            "PrivateBytesMiB":  3.3
+                                        }
+                                    ]
+                 },
+                 {
+                     "Run":  3,
+                     "LaunchToVisibleMs":  733,
+                     "UiReadyMs":  695,
+                     "Processes":  7,
+                     "TotalPrivateWorkingSetMiB":  109.6,
+                     "TotalWorkingSetMiB":  392.9,
+                     "TotalPrivateBytesMiB":  189.5,
+                     "PerProcess":  [
+                                        {
+                                            "Role":  "renderer",
+                                            "PrivateWorkingSetMiB":  35.1,
+                                            "WorkingSetMiB":  93.1,
+                                            "PrivateBytesMiB":  46
+                                        },
+                                        {
+                                            "Role":  "webview2 browser",
+                                            "PrivateWorkingSetMiB":  30,
+                                            "WorkingSetMiB":  126.3,
+                                            "PrivateBytesMiB":  38.5
+                                        },
+                                        {
+                                            "Role":  "gpu-process",
+                                            "PrivateWorkingSetMiB":  26.7,
+                                            "WorkingSetMiB":  72.3,
+                                            "PrivateBytesMiB":  74.7
+                                        },
+                                        {
+                                            "Role":  "utility: NetworkService",
+                                            "PrivateWorkingSetMiB":  7.5,
+                                            "WorkingSetMiB":  37.8,
+                                            "PrivateBytesMiB":  12.7
+                                        },
+                                        {
+                                            "Role":  "dizero (core)",
+                                            "PrivateWorkingSetMiB":  5,
+                                            "WorkingSetMiB":  31.2,
+                                            "PrivateBytesMiB":  6.6
+                                        },
+                                        {
+                                            "Role":  "utility: StorageService",
+                                            "PrivateWorkingSetMiB":  3.1,
+                                            "WorkingSetMiB":  19.8,
+                                            "PrivateBytesMiB":  7.6
+                                        },
+                                        {
+                                            "Role":  "crashpad-handler",
+                                            "PrivateWorkingSetMiB":  2.1,
+                                            "WorkingSetMiB":  12.4,
+                                            "PrivateBytesMiB":  3.3
+                                        }
+                                    ]
+                 }
+             ],
+    "MedianLaunchToVisibleMs":  734,
+    "MedianPrivateWorkingSetMiB":  109.6,
+    "MedianWorkingSetMiB":  392.9,
+    "MedianPrivateBytesMiB":  189.5
+}

@@ -1,0 +1,27 @@
+{
+  "id": "com.dizero.ember-theme",
+  "name": "Ember",
+  "version": "1.0.0",
+  "description": "A warm theme: charcoal surfaces with a glowing ember accent. Colour tokens only, no code.",
+  "author": "DiZero",
+  "apiVersion": "1",
+  "kind": "theme",
+  "category": "appearance",
+  "permissions": ["ui.themes"],
+  "theme": {
+    "label": "Ember",
+    "tokens": {
+      "background": "#110f0e",
+      "surface": "#181514",
+      "surfaceSecondary": "#1e1a18",
+      "surfaceElevated": "#2a2421",
+      "accent": "#f08a5d",
+      "accentHover": "#ffa47c",
+      "accentMuted": "#9a5338",
+      "textPrimary": "#f7efe9",
+      "textSecondary": "#b9aca4",
+      "textMuted": "#857871",
+      "border": "#332b27"
+    }
+  }
+}

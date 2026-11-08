@@ -1,0 +1,8 @@
+/target
+node_modules/
+dist/
+apps/desktop/src-tauri/gen/
+*.log
+.DS_Store
+Thumbs.db
+tests/e2e/out/

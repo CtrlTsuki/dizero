@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="dz-ring" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#B9A8FF"/>
+      <stop offset="1" stop-color="#7259E8"/>
+    </linearGradient>
+  </defs>
+  <rect x="48" y="48" width="928" height="928" rx="224" fill="#17171D"/>
+  <rect x="52" y="52" width="920" height="920" rx="220" fill="none" stroke="#2E2D38" stroke-width="8"/>
+  <rect x="350" y="226" width="324" height="572" rx="162" fill="none" stroke="url(#dz-ring)" stroke-width="76"/>
+  <line x1="428" y1="664" x2="596" y2="360" stroke="url(#dz-ring)" stroke-width="64" stroke-linecap="round"/>
+</svg>

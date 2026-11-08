@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-data-prune"
+description = "Enables the data_prune command without any pre-configured scope."
+commands.allow = ["data_prune"]
+
+[[permission]]
+identifier = "deny-data-prune"
+description = "Denies the data_prune command without any pre-configured scope."
+commands.deny = ["data_prune"]

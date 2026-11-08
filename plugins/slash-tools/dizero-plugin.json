@@ -1,0 +1,20 @@
+{
+  "id": "com.dizero.slash-tools",
+  "name": "Slash Tools",
+  "version": "1.0.0",
+  "description": "Handy composer commands: /shrug, /tableflip, /roll dice and /time.",
+  "author": "DiZero",
+  "apiVersion": "1",
+  "kind": "script",
+  "category": "messaging",
+  "entry": "index.js",
+  "permissions": ["commands.slash"],
+  "contributes": {
+    "commands": [
+      { "name": "shrug", "description": "Append ¯\\_(ツ)_/¯ to your message", "usage": "/shrug [text]" },
+      { "name": "tableflip", "description": "Append (╯°□°)╯︵ ┻━┻", "usage": "/tableflip [text]" },
+      { "name": "roll", "description": "Roll dice, e.g. 2d6 or d20", "usage": "/roll [NdM]" },
+      { "name": "time", "description": "Insert your current local time", "usage": "/time" }
+    ]
+  }
+}

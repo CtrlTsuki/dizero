@@ -1,0 +1,16 @@
+{
+  "id": "com.example.hello",
+  "name": "Hello",
+  "version": "0.1.0",
+  "description": "A starting point: one command, one panel, one saved value.",
+  "author": "Your name",
+  "apiVersion": "1",
+  "kind": "script",
+  "category": "productivity",
+  "entry": "index.js",
+  "permissions": ["commands.slash", "ui.panels", "storage.local"],
+  "contributes": {
+    "commands": [{ "name": "hello", "description": "Say hello to someone", "usage": "/hello [name]" }],
+    "panels": [{ "id": "main", "title": "Hello", "placement": "dock", "icon": "sparkles" }]
+  }
+}

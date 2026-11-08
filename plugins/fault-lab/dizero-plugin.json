@@ -1,0 +1,20 @@
+{
+  "id": "com.dizero.fault-lab",
+  "name": "Fault Lab",
+  "version": "1.0.0",
+  "description": "Deliberately misbehaves so you can watch the sandbox contain it: an endless loop, a memory bomb and a crash. Safe to install.",
+  "author": "DiZero",
+  "apiVersion": "1",
+  "kind": "script",
+  "category": "developer",
+  "entry": "index.js",
+  "permissions": ["commands.slash"],
+  "contributes": {
+    "commands": [
+      { "name": "hang", "description": "Run an infinite loop (stopped by the time budget)" },
+      { "name": "bomb", "description": "Allocate until the memory cap is hit" },
+      { "name": "crash", "description": "Throw an uncaught error" },
+      { "name": "escape", "description": "Probe the sandbox for filesystem, network and process access" }
+    ]
+  }
+}

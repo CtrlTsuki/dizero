@@ -1,0 +1,8 @@
+{
+  "name": "@dizero/dzsdk",
+  "version": "1.0.0",
+  "description": "DZSDK: plugin template and tooling for DiZero (API v1).",
+  "license": "(MIT OR Apache-2.0)",
+  "private": true,
+  "files": ["template"]
+}

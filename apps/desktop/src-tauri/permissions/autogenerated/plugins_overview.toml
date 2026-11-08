@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-plugins-overview"
+description = "Enables the plugins_overview command without any pre-configured scope."
+commands.allow = ["plugins_overview"]
+
+[[permission]]
+identifier = "deny-plugins-overview"
+description = "Denies the plugins_overview command without any pre-configured scope."
+commands.deny = ["plugins_overview"]

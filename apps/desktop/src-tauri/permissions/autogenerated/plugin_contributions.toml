@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-plugin-contributions"
+description = "Enables the plugin_contributions command without any pre-configured scope."
+commands.allow = ["plugin_contributions"]
+
+[[permission]]
+identifier = "deny-plugin-contributions"
+description = "Denies the plugin_contributions command without any pre-configured scope."
+commands.deny = ["plugin_contributions"]

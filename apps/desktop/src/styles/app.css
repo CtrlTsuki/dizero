@@ -1,0 +1,415 @@
+/* DiZero design system.
+   Colour tokens are set at runtime by lib/theme.ts (theme plugins + accent
+   override + high contrast). The values below are the defaults so the first
+   paint matches the dark window background. */
+
+:root {
+  --dz-background: #101014;
+  --dz-surface: #17171d;
+  --dz-surface-secondary: #1d1d25;
+  --dz-surface-elevated: #24242e;
+  --dz-accent: #9278f5;
+  --dz-accent-hover: #a48dff;
+  --dz-accent-muted: #6655a8;
+  --dz-accent-rgb: 146, 120, 245;
+  --dz-accent-soft: rgba(146, 120, 245, 0.16);
+  --dz-accent-ring: rgba(146, 120, 245, 0.55);
+  --dz-on-accent: #ffffff;
+  --dz-text-primary: #f4f2fa;
+  --dz-text-secondary: #aaa8b7;
+  --dz-text-muted: #777584;
+  --dz-border: #2c2b35;
+  --dz-border-strong: #45434f;
+  --dz-success: #65c99a;
+  --dz-warning: #e8b96c;
+  --dz-danger: #e57883;
+  --dz-hover: #24242c;
+  --dz-active: #2b2b33;
+  --dz-sidebar-hover: #1f1f25;
+  --dz-sidebar-active: #26262c;
+  --dz-input: #16161c;
+
+  /* Type: Inter for everything; Geist Mono only for code. 1rem = 14px × scale. */
+  --dz-font-ui: "Inter Variable", "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --dz-font-code: "Geist Mono Variable", "Cascadia Code", Consolas, monospace;
+  --dz-text-xs: 0.8125rem;   /* 11.4 */
+  --dz-text-sm: 0.9rem;      /* 12.6 */
+  --dz-text-md: 1rem;        /* 14 */
+  --dz-text-lg: 1.143rem;    /* 16 */
+  --dz-text-xl: 1.429rem;    /* 20 */
+  --dz-text-2xl: 2rem;       /* 28 */
+
+  /* Radii encode hierarchy: controls < tiles < floating surfaces. */
+  --dz-r-control: 6px;
+  --dz-r-tile: 12px;
+  --dz-r-float: 10px;
+
+  --dz-rail: 64px;
+  --dz-header: 48px;
+  --dz-dock: 268px;
+
+  --dz-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dz-fast: 120ms;
+  --dz-base: 160ms;
+
+  --dz-shadow-float: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--dz-border);
+
+  /* Density: message row rhythm. */
+  --dz-row-gap: 2px;
+  --dz-group-gap: 14px;
+  --dz-avatar: 36px;
+
+  color-scheme: dark;
+  font-size: calc(14px * var(--dz-font-scale, 1));
+}
+
+:root[data-density="compact"] {
+  --dz-row-gap: 0px;
+  --dz-group-gap: 8px;
+  --dz-avatar: 28px;
+}
+:root[data-density="comfortable"] {
+  --dz-row-gap: 4px;
+  --dz-group-gap: 20px;
+  --dz-avatar: 40px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--dz-background);
+  color: var(--dz-text-primary);
+  font-family: var(--dz-font-ui);
+  font-size: var(--dz-text-md);
+  line-height: 1.45;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  height: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  caret-color: var(--dz-accent-hover);
+}
+
+select option {
+  background: var(--dz-surface-elevated);
+  color: var(--dz-text-primary);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--dz-text-xl);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+h2 {
+  font-size: var(--dz-text-lg);
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: var(--dz-text-md);
+  font-weight: 600;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--dz-font-code);
+  font-size: 0.92em;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 1px 5px;
+  border: 1px solid var(--dz-border-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--dz-surface);
+  color: var(--dz-text-secondary);
+  font-size: var(--dz-text-xs);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--dz-text-muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus: always visible for keyboard users, never for mouse clicks. */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--dz-accent);
+  outline-offset: 2px;
+  border-radius: var(--dz-r-control);
+}
+
+::selection {
+  background: rgba(var(--dz-accent-rgb), 0.35);
+}
+
+/* Scrollbars: thin, quiet, visible on hover. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dz-border) transparent;
+}
+*:hover {
+  scrollbar-color: var(--dz-border-strong) transparent;
+}
+
+/* Shared controls ----------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: var(--dz-r-control);
+  font-size: var(--dz-text-sm);
+  font-weight: 560;
+  white-space: nowrap;
+  transition: background-color var(--dz-fast) var(--dz-ease), color var(--dz-fast) var(--dz-ease),
+    border-color var(--dz-fast) var(--dz-ease);
+}
+.btn-primary {
+  background: var(--dz-accent);
+  color: var(--dz-on-accent);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--dz-accent-hover);
+}
+.btn-ghost {
+  border: 1px solid var(--dz-border);
+  color: var(--dz-text-primary);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--dz-hover);
+  border-color: var(--dz-border-strong);
+}
+.btn-danger {
+  border: 1px solid color-mix(in srgb, var(--dz-danger) 45%, transparent);
+  color: var(--dz-danger);
+}
+.btn-danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--dz-danger) 12%, transparent);
+}
+.btn:disabled {
+  opacity: 0.45;
+}
+.btn-sm {
+  height: 26px;
+  padding: 0 9px;
+  font-size: var(--dz-text-xs);
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--dz-r-control);
+  color: var(--dz-text-secondary);
+  transition: background-color var(--dz-fast) var(--dz-ease), color var(--dz-fast) var(--dz-ease);
+}
+.icon-btn:hover:not(:disabled),
+.icon-btn[aria-pressed="true"],
+.icon-btn[aria-expanded="true"] {
+  background: var(--dz-hover);
+  color: var(--dz-text-primary);
+}
+
+.field {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--dz-border);
+  border-radius: var(--dz-r-control);
+  background: var(--dz-input);
+  color: var(--dz-text-primary);
+  transition: border-color var(--dz-fast) var(--dz-ease);
+}
+.field::placeholder {
+  color: var(--dz-text-muted);
+}
+.field:hover {
+  border-color: var(--dz-border-strong);
+}
+.field:focus-visible {
+  outline: none;
+  border-color: var(--dz-accent);
+  box-shadow: 0 0 0 3px var(--dz-accent-soft);
+}
+
+/* Status LED: the console-style indicator used for presence and health. */
+.led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dz-text-muted);
+  flex: none;
+}
+.led[data-tone="online"],
+.led[data-tone="ok"] {
+  background: var(--dz-success);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--dz-success) 60%, transparent);
+}
+.led[data-tone="idle"],
+.led[data-tone="warn"] {
+  background: var(--dz-warning);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--dz-warning) 55%, transparent);
+}
+.led[data-tone="dnd"],
+.led[data-tone="bad"] {
+  background: var(--dz-danger);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--dz-danger) 55%, transparent);
+}
+.led[data-tone="accent"] {
+  background: var(--dz-accent);
+  box-shadow: 0 0 6px var(--dz-accent-ring);
+}
+.led[data-tone="offline"],
+.led[data-tone="off"] {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--dz-text-muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: var(--dz-text-xs);
+  font-weight: 560;
+  border: 1px solid var(--dz-border);
+  color: var(--dz-text-secondary);
+  white-space: nowrap;
+}
+.badge[data-tone="ok"] {
+  color: var(--dz-success);
+  border-color: color-mix(in srgb, var(--dz-success) 35%, transparent);
+}
+.badge[data-tone="warn"] {
+  color: var(--dz-warning);
+  border-color: color-mix(in srgb, var(--dz-warning) 35%, transparent);
+}
+.badge[data-tone="bad"] {
+  color: var(--dz-danger);
+  border-color: color-mix(in srgb, var(--dz-danger) 35%, transparent);
+}
+.badge[data-tone="accent"] {
+  color: var(--dz-accent-hover);
+  border-color: var(--dz-accent-muted);
+}
+
+/* Page scaffold for non-workspace screens. */
+.page {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--dz-surface-secondary);
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 28px;
+  border-bottom: 1px solid var(--dz-border);
+  flex: none;
+}
+.page-header p {
+  color: var(--dz-text-muted);
+  font-size: var(--dz-text-sm);
+}
+.page-body {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 28px 48px;
+}
+
+/* Skeleton shimmer for loading states. */
+.skeleton {
+  background: linear-gradient(90deg, var(--dz-hover) 0%, var(--dz-active) 50%, var(--dz-hover) 100%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: dz-shimmer 1.4s linear infinite;
+}
+@keyframes dz-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Reduced motion: from the OS, the user setting, or Eco mode. */
+:root[data-motion="reduce"] *,
+:root[data-motion="reduce"] *::before,
+:root[data-motion="reduce"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}

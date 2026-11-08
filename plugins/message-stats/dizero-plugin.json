@@ -1,0 +1,18 @@
+{
+  "id": "com.dizero.message-stats",
+  "name": "Message Stats",
+  "version": "1.0.0",
+  "description": "Counts new messages and words as they arrive and shows who's been most active, locally.",
+  "author": "DiZero",
+  "apiVersion": "1",
+  "kind": "script",
+  "category": "productivity",
+  "entry": "index.js",
+  "permissions": ["events.messages", "storage.local", "ui.panels", "notifications"],
+  "contributes": {
+    "events": ["messageCreated"],
+    "panels": [
+      { "id": "activity", "title": "Activity", "placement": "dock", "icon": "bar-chart" }
+    ]
+  }
+}

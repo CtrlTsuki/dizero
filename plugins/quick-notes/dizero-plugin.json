@@ -1,0 +1,18 @@
+{
+  "id": "com.dizero.quick-notes",
+  "name": "Quick Notes",
+  "version": "1.0.0",
+  "description": "A private scratchpad in the dock, with your pinned note shown at the bottom of the channel list.",
+  "author": "DiZero",
+  "apiVersion": "1",
+  "kind": "script",
+  "category": "productivity",
+  "entry": "index.js",
+  "permissions": ["ui.panels", "ui.sidebar", "storage.local"],
+  "contributes": {
+    "panels": [
+      { "id": "notes", "title": "Notes", "placement": "dock", "icon": "notebook" },
+      { "id": "pinned", "title": "Pinned note", "placement": "sidebar", "icon": "bookmark" }
+    ]
+  }
+}
